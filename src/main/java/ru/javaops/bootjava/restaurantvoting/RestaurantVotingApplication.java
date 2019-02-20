@@ -23,13 +23,6 @@ public class RestaurantVotingApplication implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        HashSet set1 = new HashSet();
-        set1.add(Role.ROLE_USER);
-        HashSet set2 = new HashSet();
-        set2.add(Role.ROLE_USER);
-        set2.add(Role.ROLE_ADMIN);
-        userRepository.save(new User("user@gmail.com", "User_First", "User_Last", "password", set1));
-        userRepository.save(new User("admin@javaops.ru", "Admin_First", "Admin_Last", "admin", set2));
         System.out.println(userRepository.findAll());
     }
 }
